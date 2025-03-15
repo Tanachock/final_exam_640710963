@@ -47,7 +47,7 @@ class MyProfile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20),
-                   Row(
+                  Row(
                     children: [
                       const Icon(Icons.lock, color: Colors.blue),
                       const SizedBox(width: 8),
@@ -55,7 +55,7 @@ class MyProfile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20),
-                   Row(
+                  Row(
                     children: [
                       const Icon(Icons.privacy_tip, color: Colors.blue),
                       const SizedBox(width: 8),
@@ -63,9 +63,21 @@ class MyProfile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20),
-                  ElevatedButton(onPressed: (){}, child: Text("แก้ไขโปรไฟล์")),
+                  ElevatedButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Message")),
+                        );
+                      },
+                      child: Text("แก้ไขโปรไฟล์")),
                   SizedBox(height: 20),
-                  ElevatedButton(onPressed: (){}, child: Text("ออกจากระบบ"))
+                  ElevatedButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Message")),
+                        );
+                      },
+                      child: Text("ออกจากระบบ"))
                 ],
               )),
             )));
